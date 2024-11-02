@@ -13,7 +13,7 @@ const Quiz = () => {
   const [isQuizStarted, setQuizStarted] = useState(false);
   const [userName, setUserName] = useState("");
   const [highScore, setHighScore] = useState(0); //changes
-  const [timer, setTimer] = useState(30);
+  const [timer, setTimer] = useState(60);
 
   const handleClick = (option) => {
     setSelectedOption(option);
@@ -28,7 +28,7 @@ const Quiz = () => {
     setSelectedOption(null);
     setCurrentAnswer(null);
     setCurrentQuestionIndex((index) => index + 1);
-    setTimer(30);
+    setTimer(60);
   };
 
   const handleStartQuiz = () => {
@@ -41,7 +41,7 @@ const Quiz = () => {
       } else {
         setHighScore(0); // No high score for this user yet
       }
-      setTimer(30);
+      setTimer(60);
     } else {
       alert("Please enter your name to start the quiz.");
     }
